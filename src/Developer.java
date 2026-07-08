@@ -12,6 +12,7 @@ public class Developer extends Employee {
         this.bonus = baseSalary;
     }
 
+   @Override
     public void calculateSalary() {
         double totalSalary = getBasicSalary() + bonus;
         setSalary(totalSalary);

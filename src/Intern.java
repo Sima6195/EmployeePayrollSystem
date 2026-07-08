@@ -7,8 +7,5 @@ public class Intern extends Employee {
 
         super(employeeName, employeeSurname, employeeNumber, "Intern", baseSalary);
     }
-
-    public void calculateSalary() {
-        setSalary(getBasicSalary());
-    }
+    
 }

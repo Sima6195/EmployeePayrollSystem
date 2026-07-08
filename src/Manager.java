@@ -13,6 +13,7 @@ public class Manager extends Employee {
         this.allowance = baseSalary;
     }
 
+    @Override
     public void calculateSalary() {
         double totalSalary = getBasicSalary() + bonus + allowance;
         setSalary(totalSalary);

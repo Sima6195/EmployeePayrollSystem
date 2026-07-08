@@ -41,8 +41,8 @@ public class Employee {
         this.salary = salary;
         }
 
-        public double salary () {
-            return salary;
+        public void calculateSalary() {
+            setSalary(getBasicSalary());
         }
 
         // Tester//
