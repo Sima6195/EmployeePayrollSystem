@@ -3,13 +3,14 @@ public class Developer extends Employee {
     private double bonus;
 
     public Developer(String employeeName,
-                  String employeeSurname,
-                  String employeeNumber,
-                  double baseSalary) {
+                     String employeeSurname,
+                     String employeeNumber,
+                     double baseSalary,
+                     double bonus) {
 
         super(employeeName, employeeSurname, employeeNumber, "Developer", baseSalary);
 
-        this.bonus = baseSalary;
+        this.bonus = bonus;
     }
 
    @Override

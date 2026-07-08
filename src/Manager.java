@@ -3,14 +3,16 @@ public class Manager extends Employee {
     private double allowance;
 
     public Manager(String employeeName,
-                     String employeeSurname,
-                     String employeeNumber,
-                     double baseSalary) {
+                   String employeeSurname,
+                   String employeeNumber,
+                   double baseSalary,
+                   double bonus,
+                   double allowance) {
 
         super(employeeName, employeeSurname, employeeNumber, "Manager", baseSalary);
 
-        this.bonus = baseSalary;
-        this.allowance = baseSalary;
+        this.bonus = bonus;
+        this.allowance = allowance;
     }
 
     @Override
