@@ -11,6 +11,7 @@ public class Employee {
     private double salary;
     private double baseSalary;
 
+    // constructor
     public Employee(String employeeName, String employeeSurname, String employeeNumber, String position, double baseSalary) {
         this.employeeName = employeeName;
         this.employeeSurname = employeeSurname;
@@ -18,7 +19,7 @@ public class Employee {
         this.position = position;
         this.baseSalary = baseSalary;
     }
-
+//getters
         public String getEmployeeName () {
             return employeeName;
         }
