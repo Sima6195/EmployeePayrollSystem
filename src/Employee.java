@@ -41,6 +41,10 @@ public class Employee {
         this.salary = salary;
         }
 
+        public void calculateSalary() {
+            setSalary(getBasicSalary());
+        }
+
         // Tester//
 
 
