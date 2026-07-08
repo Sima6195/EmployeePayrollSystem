@@ -6,7 +6,6 @@ public class SearchEmployee {
 
     public void searchEmployee(ArrayList<Employee> employees, Scanner input) {
 
-
         System.out.print("Enter employee number to search: ");
         String employeeNumber = input.nextLine();
 
@@ -33,7 +32,6 @@ public class SearchEmployee {
         }
     }
 
-    // Temporary testing section
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -45,7 +43,7 @@ public class SearchEmployee {
                 "Smith",
                 "EMP001",
                 "Manager",
-                45000.00git
+                45000.00
         ));
 
         employees.add(new Employee(
@@ -71,3 +69,4 @@ public class SearchEmployee {
         input.close();
     }
 }
+
