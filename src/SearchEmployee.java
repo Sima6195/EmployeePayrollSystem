@@ -39,8 +39,8 @@ public class SearchEmployee {
         ArrayList<Employee> employees = new ArrayList<>();
 
         employees.add(new Employee(
-                "John",
-                "Smith",
+                "Mpho",
+                "Baloyi",
                 "EMP001",
                 "Manager",
                 45000.00
@@ -56,7 +56,7 @@ public class SearchEmployee {
 
         employees.add(new Employee(
                 "Michael",
-                "Brown",
+                "Zulu",
                 "EMP003",
                 "Developer",
                 40000.00
