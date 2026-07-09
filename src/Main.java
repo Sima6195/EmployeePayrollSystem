@@ -197,20 +197,49 @@ public class Main {
                         default:
                             System.out.println("Invalid Employee Type!");
                     }
-
+                    if (showPostActionMenu(scanner)) {
+                        System.out.println("Thank you for using Employee Payroll System.");
+                        choice = 5;
+                    }
                     break;
 
                 case 2:
-                    System.out.println("View Employees feature coming soon...");
+
+                    System.out.println("\n----- Employee List -----");
+                    for (Employee emp : employees) {
+                        emp.calculateSalary(); // runs the calculation, stores result in "salary"
+
+                        System.out.println("Name: " + emp.getEmployeeName() + " " + emp.getEmployeeSurname());
+                        System.out.println("Employee Number: " + emp.getEmployeeNumber());
+                        System.out.println("Position: " + emp.getPosition());
+                        System.out.println("Base Salary: " + emp.getBasicSalary());
+                        System.out.println("Calculated Salary: " + emp.getSalary());
+                        System.out.println("--------------------------");
+                    }
+                    if (showPostActionMenu(scanner)) {
+                        System.out.println("Thank you for using Employee Payroll System.");
+                        choice = 5;
+                    }
                     break;
 
                 case 3:
                     SearchEmployee search = new SearchEmployee();
                     search.searchEmployee(employees, scanner);
+                    if (showPostActionMenu(scanner)) {
+                        System.out.println("Thank you for using Employee Payroll System.");
+                        choice = 5;
+                    }
+                    break;
 
                 case 4:
-                    System.out.println("Remove Employee feature coming soon...");
+                    removeEmployee(scanner);
+                    if (showPostActionMenu(scanner)) {
+                        System.out.println("Thank you for using Employee Payroll System.");
+                        choice = 5;
+                    }
                     break;
+
+
 
                 case 5:
                     System.out.println("Thank you for using Employee Payroll System.");
@@ -223,5 +252,47 @@ public class Main {
         } while (choice != 5);
 
         scanner.close();
+    }
+
+// Remove Employee method
+    public static void removeEmployee(Scanner scanner) {
+        if (employees.isEmpty()) {
+            System.out.println("No employees to remove.");
+            return;
+        }
+
+        System.out.print("Enter Employee Number to remove: ");
+        String empNumberToRemove = scanner.nextLine();
+
+        Employee foundEmployee = null;
+
+        for (Employee emp : employees) {
+            if (emp.getEmployeeNumber().equalsIgnoreCase(empNumberToRemove)) {
+                foundEmployee = emp;
+                break;
+            }
+        }
+
+        if (foundEmployee != null) {
+            employees.remove(foundEmployee);
+            System.out.println("Employee " + foundEmployee.getEmployeeName() + " "
+                    + foundEmployee.getEmployeeSurname() + " removed successfully.");
+        } else {
+            System.out.println("No employee found with number " + empNumberToRemove);
+        }
+
+
+    }
+
+    // Post Action
+    public static boolean showPostActionMenu(Scanner scanner) {
+        System.out.println("\n1. Back to Menu");
+        System.out.println("2. Exit");
+        System.out.print("Enter choice: ");
+
+        int postChoice = scanner.nextInt();
+        scanner.nextLine(); // clear the leftover newline
+
+        return postChoice == 2;
     }
 }

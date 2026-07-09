@@ -41,6 +41,10 @@ public class Employee {
         this.salary = salary;
         }
 
+        public double getSalary() {
+        return salary;
+    }
+
         public void calculateSalary() {
             setSalary(getBasicSalary());
         }
@@ -65,6 +69,8 @@ public class Employee {
             System.out.println("Number: " + emp1.getEmployeeNumber());
             System.out.println("Position: " + emp1.getPosition());
             System.out.println("Base Salary: " + emp1.getBasicSalary());
+
+
 
         }
 //    Employee emp2 = new Employee(
