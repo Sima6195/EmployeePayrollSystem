@@ -44,7 +44,8 @@ public class Main {
             System.out.println("2. View Employees");
             System.out.println("3. Search Employee");
             System.out.println("4. Remove Employee");
-            System.out.println("5. Exit");
+            System.out.println("5. Calculate Payroll");
+            System.out.println("6. Exit");
             System.out.print("\nEnter your choice: ");
 
             choice = scanner.nextInt();
@@ -213,6 +214,23 @@ public class Main {
                     break;
 
                 case 5:
+
+                    System.out.println("\n========== PAYROLL ==========");
+
+                    for (Employee employee : employees) {
+
+                        employee.calculateSalary();
+
+                        System.out.println("Employee Number : " + employee.getEmployeeNumber());
+                        System.out.println("Employee Name   : " + employee.getEmployeeName() + " " + employee.getEmployeeSurname());
+                        System.out.println("Position        : " + employee.getPosition());
+                        System.out.println("Total Salary    : R" + employee.getSalary());
+                        System.out.println("--------------------------------------");
+                    }
+
+                    break;
+
+                case 6:
                     System.out.println("Thank you for using Employee Payroll System.");
                     break;
 
@@ -220,7 +238,7 @@ public class Main {
                     System.out.println("Invalid menu choice.");
             }
 
-        } while (choice != 5);
+        } while (choice != 6);
 
         scanner.close();
     }

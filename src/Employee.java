@@ -40,6 +40,10 @@ public class Employee {
         public void setSalary(double salary) {
         this.salary = salary;
         }
+//        added getMethod
+    public double getSalary() {
+        return salary;
+    }
 
         public void calculateSalary() {
             setSalary(getBasicSalary());
