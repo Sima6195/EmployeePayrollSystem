@@ -53,9 +53,7 @@ public class Employee {
         return 0;
     }
 
-        public double getSalary() {
-        return salary;
-    }
+
 
         public void calculateSalary() {
             setSalary(getBasicSalary());
