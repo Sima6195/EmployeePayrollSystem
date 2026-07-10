@@ -44,6 +44,14 @@ public class Employee {
     public double getSalary() {
         return salary;
     }
+    // These methods are added for polymorphism
+    public double getBonus() {
+        return 0;
+    }
+
+    public double getAllowance() {
+        return 0;
+    }
 
         public void calculateSalary() {
             setSalary(getBasicSalary());

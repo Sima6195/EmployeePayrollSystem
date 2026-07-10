@@ -224,6 +224,16 @@ public class Main {
                         System.out.println("Employee Number : " + employee.getEmployeeNumber());
                         System.out.println("Employee Name   : " + employee.getEmployeeName() + " " + employee.getEmployeeSurname());
                         System.out.println("Position        : " + employee.getPosition());
+                        System.out.println("Base Salary     : R" + employee.getBasicSalary());
+
+                        if (employee.getBonus() > 0) {
+                            System.out.println("Bonus           : R" + employee.getBonus());
+                        }
+
+                        if (employee.getAllowance() > 0) {
+                            System.out.println("Allowance       : R" + employee.getAllowance());
+                        }
+
                         System.out.println("Total Salary    : R" + employee.getSalary());
                         System.out.println("--------------------------------------");
                     }

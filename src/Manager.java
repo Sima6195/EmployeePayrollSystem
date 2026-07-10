@@ -20,4 +20,12 @@ public class Manager extends Employee {
         double totalSalary = getBasicSalary() + bonus + allowance;
         setSalary(totalSalary);
     }
+
+    public double getAllowance() {
+        return allowance;
+    }
+
+    public double getBonus() {
+        return bonus;
+    }
 }

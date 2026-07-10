@@ -18,4 +18,8 @@ public class Developer extends Employee {
         double totalSalary = getBasicSalary() + bonus;
         setSalary(totalSalary);
     }
+
+    public double getBonus() {
+        return bonus;
+    }
 }
