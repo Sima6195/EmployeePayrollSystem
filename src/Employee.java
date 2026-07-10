@@ -40,6 +40,18 @@ public class Employee {
         public void setSalary(double salary) {
         this.salary = salary;
         }
+//        added getMethod
+    public double getSalary() {
+        return salary;
+    }
+    // These methods are added for polymorphism
+    public double getBonus() {
+        return 0;
+    }
+
+    public double getAllowance() {
+        return 0;
+    }
 
         public double getSalary() {
         return salary;
